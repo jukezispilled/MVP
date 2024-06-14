@@ -21,9 +21,9 @@
   "scripts": {
     "dev": "nodemon src/server/index.ts",
     "dev:client": "ts-node src/server/index.ts",
-    "build:server": "tsc --project tsconfig.server.json",
-    "build:next": "next build",
-    "build": "npm-run-all build:*",
+    "build:server": "tsc --project tsconfig.server.json --no-warnings",
+    "build:next": "next build --no-warnings" ,
+    "build": "npm-run-all build:* --no-warnings",
     "start": "NODE_ENV=production node build/server/index.js",
     "start:next": "next start"
   },
